@@ -3,7 +3,7 @@
 const config = require('../../config/index');
 
 module.exports = db => {
-  const login = async id => {
+  const getPath = async id => {
     try {
       const { users } = await db(config());
       const user = await users.findById(id);
@@ -14,6 +14,6 @@ module.exports = db => {
   };
 
   return {
-    login,
+    getPath,
   };
 };
