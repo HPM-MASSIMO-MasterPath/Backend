@@ -1,2 +1,2 @@
 console.log('hola desde heroku')
-console.log('Test 2)
+console.log('Test 2')
