@@ -4,6 +4,8 @@
   "description": "Project for hackaton Platzi Master 2020, masterpath",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "lint": "standard",
     "lint-fix": "standard --fix",
     "test": "echo \"Error: no test specified\" && exit 0"
