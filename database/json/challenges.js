@@ -2181,6 +2181,7 @@ const run = async () => {
         name: el.name,
         description: el.description,
         url_image: el.url_image,
+        url_resources: el.url_resources,
         output: el.output,
         difficulty: el.difficulty
       })
