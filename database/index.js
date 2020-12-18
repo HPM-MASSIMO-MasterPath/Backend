@@ -16,7 +16,7 @@ module.exports = async function (config) {
       raw: true
     }
   })
-  
+
   const sequelize = setupDatabase(config)
 
   await sequelize.authenticate()
@@ -26,9 +26,7 @@ module.exports = async function (config) {
     await sequelize.sync({ force: true })
   }
 
-
   return {
 
   }
-
 }
