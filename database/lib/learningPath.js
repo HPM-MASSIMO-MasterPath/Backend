@@ -14,8 +14,17 @@ module.exports = function setup (LearningPathModel) {
     })
   }
 
+  async function findByUserById (userId) {
+    return await LearningPathModel.findAll({
+      where: {
+        userId
+      }
+    })
+  }
+
   return {
     createOrUpdate,
-    findById
+    findById,
+    findByUserById
   }
 }
