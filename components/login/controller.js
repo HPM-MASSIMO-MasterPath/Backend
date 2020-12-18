@@ -11,7 +11,6 @@ module.exports = (db) => {
     } catch (err) {
       throw err
     }
-    
   }
 
   return {

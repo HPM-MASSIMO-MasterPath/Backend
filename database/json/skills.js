@@ -4,17 +4,17 @@ const db = require('../index')
 const run = async () => {
   try {
     const cat = [
-  { name: 'Vue' },
-  { name: 'React' },
-  { name: 'Node' },
-  { name: 'Java' },
-  { name: 'Vue' },
-  { name: 'Node' },
-  { name: 'Python' },
-  { name: 'Express' },
-  { name: 'Express' },
-  { name: 'Express' }
-]
+      { name: 'Vue' },
+      { name: 'React' },
+      { name: 'Node' },
+      { name: 'Java' },
+      { name: 'Vue' },
+      { name: 'Node' },
+      { name: 'Python' },
+      { name: 'Express' },
+      { name: 'Express' },
+      { name: 'Express' }
+    ]
     const { skills } = await db(config())
     for (const element in cat) {
       const el = cat[element]

@@ -2,7 +2,6 @@
 
 module.exports = function setup (SkillsUserModel) {
   async function createOrUpdate (skillsUser) {
-   
     const creation = await SkillsUserModel.create(skillsUser)
     return creation
   }

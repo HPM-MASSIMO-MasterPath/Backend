@@ -2,7 +2,6 @@
 
 module.exports = function setup (SkillsCoursesModel) {
   async function createOrUpdate (skillsCourses) {
-    
     const creation = await SkillsCoursesModel.create(skillsCourses)
     return creation
   }

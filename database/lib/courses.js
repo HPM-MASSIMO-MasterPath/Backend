@@ -15,7 +15,6 @@ module.exports = function setup (CoursesModel) {
     } */
     const creation = await CoursesModel.create(courses)
     return creation
-
   }
 
   async function findById (id) {

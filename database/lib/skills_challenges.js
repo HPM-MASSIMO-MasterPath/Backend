@@ -2,7 +2,6 @@
 
 module.exports = function setup (skillsChallengesModel) {
   async function createOrUpdate (skillsChallenges) {
-    
     const creation = await skillsChallengesModel.create(skillsChallenges)
     return creation
   }

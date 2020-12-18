@@ -2,7 +2,6 @@
 
 module.exports = function setup (LpDoneModel) {
   async function createOrUpdate (lpDone) {
-    
     const creation = await LpDoneModel.create(lpDone)
     return creation
   }
