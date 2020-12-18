@@ -2,7 +2,7 @@
 
 module.exports = function setup (UsersModel) {
   async function createOrUpdate (users) {
-    const condition = {
+    /* const condition = {
       where: {
         id: users.id
       }
@@ -12,7 +12,9 @@ module.exports = function setup (UsersModel) {
     if (existingCondition) {
       const update = await UsersModel.update(users, condition)
       return update ? UsersModel.findOne(condition) : existingCondition
-    }
+    } */
+    const creation = await UsersModel.create(users)
+    return creation
   }
 
   async function findById (id) {

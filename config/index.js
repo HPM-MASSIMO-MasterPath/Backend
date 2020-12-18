@@ -6,7 +6,7 @@ const debug = require('debug')('MasterPath:db:setup')
 module.exports = function config () {
   const config = {
     dev: process.env.NODE_ENV === 'production',
-    port: process.env.PORT || 3000,
+    portServer: process.env.PORT || 3000,
     database: process.env.name,
     username: process.env.user,
     password: process.env.pass,

@@ -2,17 +2,8 @@
 
 module.exports = function setup (ChallengesModel) {
   async function createOrUpdate (challenges) {
-    const condition = {
-      where: {
-        id: challenges.id
-      }
-    }
-
-    const existingCondition = await ChallengesModel.findOne(condition)
-    if (existingCondition) {
-      const update = await ChallengesModel.update(challenges, condition)
-      return update ? ChallengesModel.findOne(condition) : existingCondition
-    }
+    const creation = await ChallengesModel.create(challenges)
+    return creation
   }
 
   async function findById (id) {

@@ -1,18 +1,18 @@
-const express = require('express');
-const router = express.Router();
-const controller = require('./index');
+const express = require('express')
+const router = express.Router()
+const controller = require('./index')
 
-const getPath = (req, res) => {
+const getPath = async (req, res) => {
   try {
-    const path = controller.getPath();
+    const path = await controller.getPath()
     res.status(200).json({
-      path,
-    });
+      path
+    })
   } catch (err) {
-    res.send(err);
+    res.status(400).send(err)
   }
-};
+}
 
-router.get('/', getPath);
+router.get('/', getPath)
 
-module.exports = router;
+module.exports = router

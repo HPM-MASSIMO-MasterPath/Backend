@@ -2,17 +2,8 @@
 
 module.exports = function setup (SkillsCoursesModel) {
   async function createOrUpdate (skillsCourses) {
-    const condition = {
-      where: {
-        id: skillsCourses.id
-      }
-    }
-
-    const existingCondition = await SkillsCoursesModel.findOne(condition)
-    if (existingCondition) {
-      const update = await SkillsCoursesModel.update(skillsCourses, condition)
-      return update ? SkillsCoursesModel.findOne(condition) : existingCondition
-    }
+    const creation = await SkillsCoursesModel.create(skillsCourses)
+    return creation
   }
 
   async function findById (id) {
