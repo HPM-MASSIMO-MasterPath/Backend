@@ -298,5 +298,5 @@ export default learningPath = [
   { id_users: 305, id_courses: 5 },
   { id_users: 415, id_courses: 12 },
   { id_users: 150, id_courses: 3 },
-  { id_users: 101, id_courses: 1 },
-];
+  { id_users: 101, id_courses: 1 }
+]

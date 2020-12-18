@@ -248,5 +248,5 @@ export default challenge_categories = [
   { id_challenge: 15, id_categorie: 1 },
   { id_challenge: 158, id_categorie: 1 },
   { id_challenge: 188, id_categorie: 1 },
-  { id_challenge: 66, id_categorie: 1 },
-];
+  { id_challenge: 66, id_categorie: 1 }
+]

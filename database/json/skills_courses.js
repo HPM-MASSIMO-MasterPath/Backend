@@ -8,5 +8,5 @@ export default skills_courses = [
   { id_course: 7, id_skill: 7 },
   { id_course: 8, id_skill: 8 },
   { id_course: 9, id_skill: 9 },
-  { id_course: 10, id_skill: 10 },
-];
+  { id_course: 10, id_skill: 10 }
+]

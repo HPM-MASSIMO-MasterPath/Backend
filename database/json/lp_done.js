@@ -148,5 +148,5 @@ export default lp_done = [
   { id_users: 106, id_courses: 2 },
   { id_users: 249, id_courses: 11 },
   { id_users: 106, id_courses: 3 },
-  { id_users: 290, id_courses: 2 },
-];
+  { id_users: 290, id_courses: 2 }
+]
