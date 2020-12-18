@@ -1,0 +1,32 @@
+language: node_js
+
+cache: 
+  directories:
+    - node_modules
+    - "~/.npm"
+
+node_js:
+  - 12
+
+git:
+  depth: 3
+
+script:
+  -yarn lint
+
+notifications:
+  email:
+    recipients:
+      - ingecarlos.gutierrez@gmail.com
+      on_success: always
+      on_failure: always
+
+deploy:
+  provide: heroku
+  skip-cleanup: true
+  keep-history: true
+  api_key:
+    secure: "YnR5IPN63hQ8AuCYnryuj1M68MHD8mxeg9jUza0xGgifYe7TwIkXCkESh9s9viJU9FBdHwJ/HLdPxjwa65zrydItdydyHfoL+p2xmHgJX1yZJwd0FYz7LtNRNohZbucDHldJDFHzzPB02QQdDnUb6rqops4rQUiAHc3tIGgyirJCxhu3OJX8LPaJQ+YXy1grmxNuLFLz7IaJqWM8r8w3TVFMG+vfrp/9vGO2GlicPsFhy50hb22xGJnYU/UQly9fIp7LBc73darfcMhbcb4C+yw7HE7n1j/rvdoMJELgYvoMx7gAFYbn/mS8hgXA2XY+Vha1NpVBQOoCd1t2iLlJxWJDa0lNthkjoAlHkDKogEsti21ipVvol+F5ddK8kqC6aeMbsRskSatr0dVwgOlo99AUTr/K5LZD6AiJkcPuaVZUMoxfIT0Sdw/GQzBHx9rKPMZHcXjhFTCYeJWps57jGoCP2DjyEwd83ZifasbSq33Hr3ZFo4nGC0+lNKhH3nZqGaoNCBOCmFx8D7WAJzWsw7Z8fp4eAFN1EmsChwarc4tSYj54WTglr4GBD8MmJ1YqE7szakkzrZIdUcv0XUVli6wUctCAVrTK1t3NdwoeTaYdwg3rsyYOn8OV+uMw+N4qo88SK+/Y5OprQHXNPByCqQRMRxS0q2t0BqK0Glr986A="
+  app: masterpath
+  on:
+    repo: HPM-MASSIMO-MasterPath/Backend
