@@ -4,7 +4,7 @@ module.exports = function setup (CategoriesModel) {
   async function createOrUpdate (categories) {
     const condition = {
       where: {
-        id: categories.id
+        category: categories.category
       }
     }
 
@@ -13,6 +13,8 @@ module.exports = function setup (CategoriesModel) {
       const update = await CategoriesModel.update(categories, condition)
       return update ? CategoriesModel.findOne(condition) : existingCondition
     }
+    const creation = await CategoriesModel.create(categories)
+    return creation
   }
 
   async function findById (id) {

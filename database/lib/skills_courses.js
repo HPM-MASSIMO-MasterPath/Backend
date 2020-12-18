@@ -13,6 +13,8 @@ module.exports = function setup (SkillsCoursesModel) {
       const update = await SkillsCoursesModel.update(skillsCourses, condition)
       return update ? SkillsCoursesModel.findOne(condition) : existingCondition
     }
+    const creation = await skillsCoursesModel.create(skillsCourses)
+    return creation
   }
 
   async function findById (id) {

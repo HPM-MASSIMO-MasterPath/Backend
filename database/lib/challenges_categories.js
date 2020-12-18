@@ -13,6 +13,8 @@ module.exports = function setup (ChallengesCategoriesModel) {
       const update = await ChallengesCategoriesModel.update(challengesCategories, condition)
       return update ? ChallengesCategoriesModel.findOne(condition) : existingCondition
     }
+    const creation = await ChallengesCategoriesModel.create(challengesCategories)
+    return creation
   }
 
   async function findById (id) {

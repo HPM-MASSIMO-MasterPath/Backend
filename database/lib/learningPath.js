@@ -13,6 +13,8 @@ module.exports = function setup (LearningPathModel) {
       const update = await LearningPathModel.update(learningPath, condition)
       return update ? LearningPathModel.findOne(condition) : existingCondition
     }
+    const creation = await LearningPathModel.create(learningPath)
+    return creation
   }
 
   async function findById (id) {

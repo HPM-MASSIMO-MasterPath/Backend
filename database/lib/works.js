@@ -13,6 +13,8 @@ module.exports = function setup (WorksModel) {
       const update = await WorksModel.update(works, condition)
       return update ? WorksModel.findOne(condition) : existingCondition
     }
+    const creation = await WorksModel.create(works)
+    return creation
   }
 
   async function findById (id) {

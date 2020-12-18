@@ -13,6 +13,8 @@ module.exports = function setup (SkillsUserModel) {
       const update = await SkillsUserModel.update(skillsUser, condition)
       return update ? SkillsUserModel.findOne(condition) : existingCondition
     }
+    const creation = await SkillsUserModel.create(skillsUser)
+    return creation
   }
 
   async function findById (id) {

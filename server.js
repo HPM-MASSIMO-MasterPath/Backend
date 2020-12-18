@@ -6,7 +6,7 @@ const app = express()
 const router = require('./routes/routes')
 const config = require('./config')
 
-const { port } = config()
+const { portServer } = config()
 
 app.use(cors())
 app.use(express.json())
@@ -14,6 +14,6 @@ app.use(express.json())
 // Routes
 router(app)
 
-app.listen(port, () => {
-  console.log(`Listening on: http://localhost:${port}`)
+app.listen(portServer, () => {
+  console.log(`Listening on: http://localhost:${portServer}`)
 })

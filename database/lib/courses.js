@@ -13,6 +13,9 @@ module.exports = function setup (CoursesModel) {
       const update = await CoursesModel.update(courses, condition)
       return update ? CoursesModel.findOne(condition) : existingCondition
     }
+    const creation = await CoursesModel.create(courses)
+    return creation
+
   }
 
   async function findById (id) {

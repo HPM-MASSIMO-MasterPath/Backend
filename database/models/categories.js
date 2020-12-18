@@ -10,10 +10,6 @@ module.exports = function setup (config) {
     category: {
       type: Sequelize.STRING,
       allowNull: true
-    },
-    lenguage: {
-      type: Sequelize.STRING,
-      allowNull: true
     }
   })
 }

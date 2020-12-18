@@ -1,4 +1,9 @@
-export default challenge_categories = [
+const config = require('../../config/index')
+const db = require('../index')
+
+const run = async () => {
+  try {
+    const cat = [
   { id_challenge: 66, id_categorie: 1 },
   { id_challenge: 10, id_categorie: 1 },
   { id_challenge: 23, id_categorie: 1 },
@@ -250,3 +255,18 @@ export default challenge_categories = [
   { id_challenge: 188, id_categorie: 1 },
   { id_challenge: 66, id_categorie: 1 }
 ]
+    const { challengesCategories } = await db(config())
+    for (const element in cat) {
+      const el = cat[element]
+      const category = await challengesCategories.createOrUpdate({
+        category: el.category
+      })
+      console.log(category)
+      console.log('-----')
+    }
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+run()

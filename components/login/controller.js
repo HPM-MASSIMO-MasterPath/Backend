@@ -2,8 +2,7 @@
 
 const config = require('../../config/index')
 
-module.exports = (db) {
-
+module.exports = (db) => {
   const login = async (id) => {
     try {
       const { users } = await db(config())

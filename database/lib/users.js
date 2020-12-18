@@ -13,6 +13,8 @@ module.exports = function setup (UsersModel) {
       const update = await UsersModel.update(users, condition)
       return update ? UsersModel.findOne(condition) : existingCondition
     }
+    const creation = await UsersModel.create(users)
+    return creation
   }
 
   async function findById (id) {
