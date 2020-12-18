@@ -8,5 +8,5 @@ export default skills = [
   { name: 'Python' },
   { name: 'Express' },
   { name: 'Express' },
-  { name: 'Express' },
-];
+  { name: 'Express' }
+]

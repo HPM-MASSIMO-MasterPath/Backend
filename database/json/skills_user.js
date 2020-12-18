@@ -198,5 +198,5 @@ export default skills_user = [
   { expertise: 2, id_user: 46, id_skill: 9 },
   { expertise: 5, id_user: 206, id_skill: 7 },
   { expertise: 7, id_user: 415, id_skill: 7 },
-  { expertise: 10, id_user: 162, id_skill: 10 },
-];
+  { expertise: 10, id_user: 162, id_skill: 10 }
+]

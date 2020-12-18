@@ -198,5 +198,5 @@ export default skills_courses = [
   { id_skill: 8, id_challenge: 42 },
   { id_skill: 5, id_challenge: 61 },
   { id_skill: 7, id_challenge: 32 },
-  { id_skill: 10, id_challenge: 73 },
-];
+  { id_skill: 10, id_challenge: 73 }
+]
