@@ -1,6 +1,7 @@
 'use strict'
 
 require('dotenv').config()
+const debug = require('debug')('MasterPath:db:setup')
 
 module.exports = function config () {
   const config = {

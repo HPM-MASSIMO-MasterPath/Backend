@@ -10,10 +10,6 @@ module.exports = function setup (config) {
     name: {
       type: Sequelize.STRING,
       allowNull: true
-    },
-    expertise: {
-      type: Sequelize.FLOAT,
-      allowNull: true
     }
   })
 }

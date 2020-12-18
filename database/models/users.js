@@ -11,25 +11,25 @@ module.exports = function setup (config) {
       type: Sequelize.STRING,
       allowNull: true
     },
-    email: { 
-      type: Sequelize.STRING, 
+    email: {
+      type: Sequelize.STRING,
       allowNull: true
     },
-    password: { 
-      type: Sequelize.STRING, 
+    password: {
+      type: Sequelize.STRING,
       allowNull: true
     },
-    url_avatar: { 
-      type: Sequelize.STRING, 
+    url_avatar: {
+      type: Sequelize.STRING,
       allowNull: true
     },
-    type: { 
+    type: {
       type: Sequelize.DataTypes.ENUM({
         values: [
           'student',
           'coach'
         ]
-      }), 
+      }),
       allowNull: true
     }
   })

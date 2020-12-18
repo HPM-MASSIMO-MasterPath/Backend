@@ -15,14 +15,6 @@ module.exports = function setup (config) {
       type: Sequelize.STRING,
       allowNull: true
     },
-    category: {
-      type: Sequelize.STRING,
-      allowNull: true
-    },
-    skills: {
-      type: Sequelize.STRING,
-      allowNull: true
-    },
     difficulty: {
       type: Sequelize.STRING,
       allowNull: true
