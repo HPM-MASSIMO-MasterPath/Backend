@@ -1,4 +1,9 @@
-export default learningPath = [
+const config = require('../../config/index')
+const db = require('../index')
+
+const run = async () => {
+  try {
+    const cat = [
   { id_users: 8, id_courses: 4 },
   { id_users: 265, id_courses: 4 },
   { id_users: 310, id_courses: 2 },
@@ -300,3 +305,19 @@ export default learningPath = [
   { id_users: 150, id_courses: 3 },
   { id_users: 101, id_courses: 1 }
 ]
+    const { learningPath } = await db(config())
+    for (const element in cat) {
+      const el = cat[element]
+      const category = await learningPath.createOrUpdate({
+        userId: el.id_users,
+        courseId: el.id_courses
+      })
+      console.log(category)
+      console.log('-----')
+    }
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+run()

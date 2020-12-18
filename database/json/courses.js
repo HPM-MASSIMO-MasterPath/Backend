@@ -1,4 +1,9 @@
-export default courses = [
+const config = require('../../config/index')
+const db = require('../index')
+
+const run = async () => {
+  try {
+    const cat = [
   {
     name:
       'Curso de Introducción a la Web: Historia y Funcionamiento de Internet',
@@ -86,3 +91,22 @@ export default courses = [
     difficulty: 'medium'
   }
 ]
+    const { courses } = await db(config())
+    for (const element in cat) {
+      const el = cat[element]
+      const category = await courses.createOrUpdate({
+        name: el.name,
+        url: el.url,
+        difficulty: el.difficulty,
+        categoryId: el.category
+
+      })
+      console.log(category)
+      console.log('-----')
+    }
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+run()

@@ -1,4 +1,9 @@
-export default challenge = [
+const config = require('../../config/index')
+const db = require('../index')
+
+const run = async () => {
+  try {
+    const cat = [
   {
     name: 'Karon',
     description:
@@ -2169,3 +2174,22 @@ export default challenge = [
     difficulty: 'medium'
   }
 ]
+    const { challenges } = await db(config())
+    for (const element in cat) {
+      const el = cat[element]
+      const category = await challenges.createOrUpdate({
+        name: el.name,
+        description: el.description,
+        url_image: el.url_image,
+        output: el.output,
+        difficulty: el.difficulty
+      })
+      console.log(category)
+      console.log('-----')
+    }
+  } catch (err) {
+    console.error(err)
+  }
+}
+f
+run()

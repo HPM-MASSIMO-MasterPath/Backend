@@ -1,4 +1,9 @@
-export default users = [
+const config = require('../../config/index')
+const db = require('../index')
+
+const run = async () => {
+  try {
+    const cat = [
   {
     username: 'wplewright0',
     email: 'lmulleary0@tiny.cc',
@@ -3500,3 +3505,21 @@ export default users = [
     type: 'coach'
   }
 ]
+    const { users } = await db(config())
+    for (const element in cat) {
+      const el = cat[element]
+      const category = await users.createOrUpdate({
+        username: el.username,
+        email: el.password,
+        url_avatar: el.url_avatar,
+        type: el.type
+      })
+      console.log(category)
+      console.log('-----')
+    }
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+run()

@@ -79,7 +79,7 @@ module.exports = async function (config) {
 
   // skills-challenge
   skillsChallengesModel.belongsTo(skillsModel)
-  skillsChallengesModel.belongsTo(categoriesModel)
+  skillsChallengesModel.belongsTo(challengeModel)
 
   // learningPath
   learningPathModel.belongsTo(usersModel)

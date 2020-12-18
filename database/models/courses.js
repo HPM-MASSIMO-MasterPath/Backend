@@ -12,7 +12,7 @@ module.exports = function setup (config) {
       allowNull: true
     },
     url: {
-      type: Sequelize.STRING,
+      type: Sequelize.TEXT,
       allowNull: true
     },
     difficulty: {

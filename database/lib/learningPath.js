@@ -2,17 +2,7 @@
 
 module.exports = function setup (LearningPathModel) {
   async function createOrUpdate (learningPath) {
-    const condition = {
-      where: {
-        id: learningPath.id
-      }
-    }
-
-    const existingCondition = await LearningPathModel.findOne(condition)
-    if (existingCondition) {
-      const update = await LearningPathModel.update(learningPath, condition)
-      return update ? LearningPathModel.findOne(condition) : existingCondition
-    }
+    
     const creation = await LearningPathModel.create(learningPath)
     return creation
   }

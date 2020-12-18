@@ -1,4 +1,9 @@
-export default skills_user = [
+const config = require('../../config/index')
+const db = require('../index')
+
+const run = async () => {
+  try {
+    const cat = [
   { expertise: 7, id_user: 229, id_skill: 7 },
   { expertise: 9, id_user: 132, id_skill: 5 },
   { expertise: 8, id_user: 385, id_skill: 2 },
@@ -200,3 +205,20 @@ export default skills_user = [
   { expertise: 7, id_user: 415, id_skill: 7 },
   { expertise: 10, id_user: 162, id_skill: 10 }
 ]
+    const { skillsUsers } = await db(config())
+    for (const element in cat) {
+      const el = cat[element]
+      const category = await skillsUsers.createOrUpdate({
+        expertise: el.expertise,
+        userId: el.id_user,
+        skillId: el.id_skill
+      })
+      console.log(category)
+      console.log('-----')
+    }
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+run()

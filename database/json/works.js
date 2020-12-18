@@ -1,4 +1,9 @@
-export default works = [
+const config = require('../../config/index')
+const db = require('../index')
+
+const run = async () => {
+  try {
+    const cat = [
   {
     url_repo:
       'https://sitemeter.com/eu/mi.jsp?lacus=curabitur&morbi=gravida&sem=nisi&mauris=at&laoreet=nibh&ut=in&rhoncus=hac&aliquet=habitasse&pulvinar=platea&sed=dictumst&nisl=aliquam&nunc=augue&rhoncus=quam&dui=sollicitudin&vel=vitae&sem=consectetuer&sed=eget&sagittis=rutrum&nam=at&congue=lorem&risus=integer&semper=tincidunt&porta=ante&volutpat=vel&quam=ipsum&pede=praesent&lobortis=blandit&ligula=lacinia&sit=erat&amet=vestibulum&eleifend=sed&pede=magna&libero=at&quis=nunc&orci=commodo&nullam=placerat&molestie=praesent&nibh=blandit&in=nam&lectus=nulla&pellentesque=integer&at=pede&nulla=justo&suspendisse=lacinia&potenti=eget&cras=tincidunt&in=eget&purus=tempus&eu=vel&magna=pede&vulputate=morbi&luctus=porttitor&cum=lorem&sociis=id&natoque=ligula&penatibus=suspendisse&et=ornare&magnis=consequat&dis=lectus',
@@ -790,3 +795,21 @@ export default works = [
     id_user: 231
   }
 ]
+    const { works } = await db(config())
+    for (const element in cat) {
+      const el = cat[element]
+      const category = await works.createOrUpdate({
+        url_repo: el.url_repo,
+        url_image: el.url_image,
+        comments: el.comments,
+        userId: el.id_user
+      })
+      console.log(category)
+      console.log('-----')
+    }
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+run()

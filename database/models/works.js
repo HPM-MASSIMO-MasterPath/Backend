@@ -8,11 +8,11 @@ module.exports = function setup (config) {
 
   return sequelize.define('works', {
     url_repo: {
-      type: Sequelize.STRING,
+      type: Sequelize.TEXT,
       allowNull: true
     },
     url_image: {
-      type: Sequelize.STRING,
+      type: Sequelize.TEXT,
       allowNull: true
     },
     comments: {

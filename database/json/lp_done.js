@@ -1,4 +1,9 @@
-export default lp_done = [
+const config = require('../../config/index')
+const db = require('../index')
+
+const run = async () => {
+  try {
+    const cat = [
   { id_users: 249, id_courses: 7 },
   { id_users: 318, id_courses: 11 },
   { id_users: 378, id_courses: 3 },
@@ -150,3 +155,19 @@ export default lp_done = [
   { id_users: 106, id_courses: 3 },
   { id_users: 290, id_courses: 2 }
 ]
+    const { lpDone } = await db(config())
+    for (const element in cat) {
+      const el = cat[element]
+      const category = await lpDone.createOrUpdate({
+        userId: el.id_users,
+        courseId: el.id_courses
+      })
+      console.log(category)
+      console.log('-----')
+    }
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+run()

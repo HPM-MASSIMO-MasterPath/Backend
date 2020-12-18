@@ -259,7 +259,8 @@ const run = async () => {
     for (const element in cat) {
       const el = cat[element]
       const category = await challengesCategories.createOrUpdate({
-        category: el.category
+        challengeId: el.id_challenge,
+        categoryId: el.id_categorie
       })
       console.log(category)
       console.log('-----')
