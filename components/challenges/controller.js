@@ -24,8 +24,21 @@ module.exports = db => {
     return array
   }
 
+  const challengeRandom1 = async (difficult) => {
+    const { challenges } = await db(config())
+    let array = []
+    const challenge = await challenges.findByIdB(difficult)
+    for (const elment in challenge) {
+      const el = challenge[elment]
+      const { id, createdAt, updatedAt, ...arrayChallenge } = el
+      array = array.concat(arrayChallenge)
+    }
+    return array
+  }
+
   return {
     getChallenges,
-    challengeRandom
+    challengeRandom,
+    challengeRandom1
   }
 }
