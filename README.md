@@ -8,7 +8,7 @@ Este es el backend del proyecto MasterPath para crear la comunicacion entre el B
 ## Stack 🛠️
 - [JavaScript](https://www.javascript.com/) - Lenguaje de Programación
 - [NodeJs](https://nodejs.org/en/) - Framework Web
-- [NPM](https://www.npmjs.com/) - Administración de Dependencias
+- [NPM](https://www.npmjs.com/) - Manejador de dependencias
 - [Heroku](https://www.heroku.com/#) - Heroku es uno de los PaaS más utilizados en la actualidad en entornos empresariales por su fuerte enfoque en resolver el despliegue de una aplicación.
 - [AWS](https://aws.amazon.com/) - Amazon Web Services es una colección de servicios de computación en la nube pública que en conjunto forman una plataforma de computación en la nube, ofrecidas a través de Internet por Amazon.com.
 
