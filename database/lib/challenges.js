@@ -13,7 +13,7 @@ module.exports = function setup (ChallengesModel) {
       }
     })
   }
-  
+
   async function findByIdB (difficulty) {
     console.log(difficulty)
     return await ChallengesModel.findAll({
