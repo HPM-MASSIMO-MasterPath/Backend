@@ -2,7 +2,7 @@
 
 Este es el backend del proyecto MasterPath para crear la comunicacion entre el Backend y Frontend.
 
-## Page 💻
+## Sitio Web 💻
 [master-app.herokuapp.com](https://masterpath-app.herokuapp.com/)
 
 ## Stack 🛠️
