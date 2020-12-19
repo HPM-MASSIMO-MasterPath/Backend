@@ -8,6 +8,7 @@ module.exports = db => {
     const { users, learningPath, courses, categories } = await db(config())
     const user = await users.findById(id)
     const lp = await learningPath.findByUserById(user.id)
+    console.log(lp)
     let course = []
     for (const element in lp) {
       const el = lp[element]
@@ -20,7 +21,6 @@ module.exports = db => {
       const { id, createdAt, updatedAt, ...courseCp } = courseFound
       course = course.concat(courseCp)
     }
-    console.log(course)
     return course
   }
 

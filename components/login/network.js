@@ -1,12 +1,13 @@
 const express = require('express')
 const router = express.Router()
-// const controller = require('./index')
+const controller = require('./index')
 
-const getOk = (req, res) => {
+const getOk = async (req, res) => {
   try {
-    res.send('OK')
+    const result = await controller.login(req.body)
+    res.status(200).json(result)
   } catch (err) {
-    res.send(err)
+    res.status(400).send(err)
   }
 }
 

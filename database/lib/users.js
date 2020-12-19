@@ -25,8 +25,26 @@ module.exports = function setup (UsersModel) {
     })
   }
 
+  async function findByName (username) {
+    return await UsersModel.findOne({
+      where: {
+        username
+      }
+    })
+  }
+
+  async function findByEmail (email) {
+    return await UsersModel.findOne({
+      where: {
+        email
+      }
+    })
+  }
+
   return {
     createOrUpdate,
-    findById
+    findById,
+    findByEmail,
+    findByName
   }
 }
