@@ -29,7 +29,7 @@ Instrucciónes ...
 
 ---
 ## Base de Datos 💾
-![database.jpg](./BD Relacional Master Path.png)
+![BD Relacional Master Path.png](BD Relacional Master Path.png)
 
 ---
 
