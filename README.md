@@ -21,11 +21,14 @@ Proyecto bajo la licencia MIT.
 
 ---
 ## Instalación 📲
-Instrucciones ...
-
-## Configuración 🖱
-
-Instrucciónes ...
+1. Fork a este repositorio.
+2. Crea una carpeta en tu computadora.
+3. Clona el repositorio de GitHub en tu computadora.
+4. Instala las dependencias con ``` npm install ```
+5. Corre el test en el folder MastherPath/with ``` npm run test ```
+6. Ejecuta ``` npm run start ``` si quiere ejecutarlo como en **producción**
+or
+ejecuta ``` npm run dev ``` para ejecutarlo como **desarrollador**.
 
 ---
 ## Base de Datos 💾
