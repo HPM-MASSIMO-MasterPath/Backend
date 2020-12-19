@@ -11,11 +11,12 @@ module.exports = db => {
     let course = []
     for (const element in lp) {
       const el = lp[element]
-      const { courseId } = el
+      const { courseId, complete } = el
       const courseFound = await courses.findById(courseId)
       const cat = await categories.findById(courseFound.categoryId)
       const { category } = cat
       courseFound.categoryId = category
+      courseFound.completeCouse = complete
       const { id, createdAt, updatedAt, ...courseCp } = courseFound
       course = course.concat(courseCp)
     }
