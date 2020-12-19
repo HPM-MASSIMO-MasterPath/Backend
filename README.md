@@ -29,7 +29,7 @@ Instrucciónes ...
 
 ---
 ## Base de Datos 💾
-![BD Relacional Master Path.png](BD Relacional Master Path.png)
+[Modelo Relacional](https://github.com/HPM-MASSIMO-MasterPath/Backend/blob/main/BD%20Relacional%20Master%20Path.png)
 
 ---
 
