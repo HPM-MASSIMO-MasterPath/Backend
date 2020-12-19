@@ -14,7 +14,7 @@ module.exports = db => {
     let array = []
     const max = 400
     const min = 1
-    const cycle = 10
+    const cycle = 50
     for (let i = 0; i < cycle; i++) {
       const idRandom = Math.floor((Math.random() * (max - min) + min))
       const challenge = await challenges.findById(idRandom)
