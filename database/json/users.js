@@ -1,5 +1,6 @@
 const config = require('../../config/index')
 const db = require('../index')
+const bcrypt = require('bcrypt')
 
 const run = async () => {
   try {
@@ -3508,9 +3509,11 @@ const run = async () => {
     const { users } = await db(config())
     for (const element in cat) {
       const el = cat[element]
+      const pass = await bcrypt.hash(el.password, 10)
       const category = await users.createOrUpdate({
         username: el.username,
-        email: el.password,
+        email: el.email,
+        password: pass,
         url_avatar: el.url_avatar,
         type: el.type
       })
