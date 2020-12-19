@@ -11,6 +11,6 @@ const getOk = async (req, res) => {
   }
 }
 
-router.get('/', getOk)
+router.post('/', getOk)
 
 module.exports = router
