@@ -13,6 +13,18 @@ const getChallenges = (req, res) => {
   }
 }
 
+const getChallengesRandom = async (req, res) => {
+  try {
+    const challenges = await controller.challengeRandom()
+    res.status(200).json({
+      challenges
+    })
+  } catch (err) {
+    res.status(400).send(err)
+  }
+}
+
 router.get('/', getChallenges)
+router.get('/id', getChallengesRandom)
 
 module.exports = router

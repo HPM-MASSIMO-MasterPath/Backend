@@ -9,7 +9,23 @@ module.exports = db => {
     return user
   }
 
+  const challengeRandom = async () => {
+    const { challenges } = await db(config())
+    let array = []
+    const max = 400
+    const min = 1
+    const cycle = 20
+    for (let i = 0; i < cycle; i++) {
+      const idRandom = Math.floor((Math.random() * (max - min) + min))
+      const challenge = await challenges.findById(idRandom)
+      const { id, createdAt, updatedAt, ...arrayChallenge } = challenge
+      array = array.concat(arrayChallenge)
+    }
+    return array
+  }
+
   return {
-    getChallenges
+    getChallenges,
+    challengeRandom
   }
 }
