@@ -18,7 +18,7 @@ module.exports = db => {
     for (let i = 0; i < cycle; i++) {
       const idRandom = Math.floor((Math.random() * (max - min) + min))
       const challenge = await challenges.findById(idRandom)
-      const { id, createdAt, updatedAt, ...arrayChallenge } = challenge
+      const { createdAt, updatedAt, ...arrayChallenge } = challenge
       array = array.concat(arrayChallenge)
     }
     return array
@@ -30,15 +30,23 @@ module.exports = db => {
     const challenge = await challenges.findByIdB(difficult)
     for (const elment in challenge) {
       const el = challenge[elment]
-      const { id, createdAt, updatedAt, ...arrayChallenge } = el
+      const { createdAt, updatedAt, ...arrayChallenge } = el
       array = array.concat(arrayChallenge)
     }
     return array
   }
 
+  const challengeRandom2 = async (id) => {
+    const { challenges } = await db(config())
+    const challenge = await challenges.findById(id)
+    const { createdAt, updatedAt, ...arrayChallenge } = challenge
+    return arrayChallenge
+  }
+
   return {
     getChallenges,
     challengeRandom,
-    challengeRandom1
+    challengeRandom1,
+    challengeRandom2
   }
 }
