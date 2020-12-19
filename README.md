@@ -32,7 +32,7 @@ ejecuta ``` npm run dev ``` para ejecutarlo como **desarrollador**.
 
 ---
 ## Base de Datos 💾
-[Modelo Relacional](https://github.com/HPM-MASSIMO-MasterPath/Backend/blob/main/BD%20Relacional%20Master%20Path.png)
+![Modelo Relacional](https://github.com/HPM-MASSIMO-MasterPath/Backend/blob/main/BD%20Relacional%20Master%20Path.png)
 
 ---
 
